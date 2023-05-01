@@ -1,0 +1,60 @@
+@mixin active($color, $bgColor, $bColor: $bgColor) {
+  border: 1px solid $bColor;
+  background: $bgColor;
+  color: $color;
+  cursor: pointer;
+}
+
+@mixin disabled($color: #8d8e97, $bgColor: #e8e8e8) {
+  @include active($color, $bgColor);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button {
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+
+  padding: 15.5px 31.5px;
+  border-radius: 2px;
+
+  &--primary {
+    @include active(#ffffff, #2231aa);
+
+    &:hover {
+      @include active(#ffffff, #5360cd);
+    }
+
+    &.disabled {
+      @include disabled();
+    }
+  }
+  &--secondary {
+    @include active(#313037, #e8e8e8);
+
+    &:hover {
+      @include active(#313037, #dadada);
+    }
+
+    &.disabled {
+      @include disabled();
+    }
+  }
+  &--secondary2 {
+    @include active(#fd3419, transparent);
+
+    &:hover {
+      @include active(#fd3419, transparent);
+      border: 1px solid #dadada;
+    }
+
+    &.disabled {
+      @include disabled(#8d8e97, transparent);
+      border: none;
+    }
+  }
+}

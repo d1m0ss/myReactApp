@@ -1,0 +1,27 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info {
+  @include center;
+  width: max-content;
+  padding: 18px 34px;
+  background: #2231aa;
+  column-gap: 16px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 34px;
+  font-size: 16px;
+
+  &__initials {
+    @include center;
+    height: 48px;
+    width: 48px;
+    border-radius: 2px;
+    background: #5360cd;
+  }
+  &__name {
+  }
+}

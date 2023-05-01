@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Title } from "./components/Title/Title";
+import { Button } from "./components/Button/Button";
+import { UserInfo } from "./components/UserInfo/UserInfo";
+import { HamburgerBtn } from "./components/HamburgerBtn/HamburgerBtn";
+import { Tabs } from "./components/Tabs/Tabs";
 
-function App() {
+export const App = () => {
+  const handleClick = () => {
+    console.log(1);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Title content="Sign In" />
+      <br />
+      <br />
+      <Button content="Primary" type="primary" isDisabled={false} callback={handleClick} />
+      <Button content="Primary" type="primary" isDisabled callback={handleClick} />
+      <br />
+      <br />
+      <Button content="Secondary" type="secondary" isDisabled={false} callback={handleClick} />
+      <Button content="Secondary" type="secondary" isDisabled callback={handleClick} />
+      <br />
+      <br />
+      <Button content="Secondary 2" type="secondary2" isDisabled={false} callback={handleClick} />
+      <Button content="Secondary 2" type="secondary2" isDisabled callback={handleClick} />
+      <br />
+      <br />
+      <UserInfo userName="Volkov Dmitriy" />
+      <br />
+      <br />
+      <HamburgerBtn />
+      <br />
+      <br />
+      <Tabs content="All My-favorites Popular"/>
     </div>
   );
-}
-
-export default App;
+};
