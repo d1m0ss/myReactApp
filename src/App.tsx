@@ -33,7 +33,7 @@ export const App = () => {
       <HamburgerBtn />
       <br />
       <br />
-      <Tabs content="All My-favorites Popular My-blog My-profile My-money"/>
+      <Tabs content="All My-favorites Popular"/>
     </div>
   );
 };

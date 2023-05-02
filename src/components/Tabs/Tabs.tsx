@@ -7,6 +7,7 @@ interface ITabs {
 
 export const Tabs: FC<ITabs> = ({ content }) => {
   const getTabsQuantity = (content: string, event: (e: any) => void) => {
+    if (!content.length) return;
     content = content.trim();
     return content.split(" ").map((el, i) => (
       <li className={`tabs__item${!i ? " active" : ""}`} onClick={event}>
