@@ -23,26 +23,33 @@
       content: "";
       @include dashSetings(absolute);
       top: 6px;
+      transition-property: top, transform;
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
     }
     &::after {
       content: "";
       @include dashSetings(absolute);
       bottom: 6px;
+      transition-property: bottom, transform;
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
     }
   }
 
   &.active .hamburger-btn__dash {
-    width: 16px;
-    transform: rotate(45deg);
+    background: transparent;
     &::before {
       width: 100%;
       top: 0;
-      transform: rotate(-90deg);
+      transform: rotate(45deg);
+      transition-delay: 0s, 0.3s;
     }
     &::after {
       width: 100%;
       bottom: 0;
-      height: 0;
+      transform: rotate(-45deg);
+      transition-delay: 0s, 0.3s;
     }
   }
 }
