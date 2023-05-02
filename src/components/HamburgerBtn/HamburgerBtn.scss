@@ -2,10 +2,26 @@
   width: 20px;
   height: 2px;
   position: $posStatus;
-  border-radius: 2px;
   background-color: #fff;
   pointer-events: none;
-  transition: all 0.3s;
+  transition: all 0.4s;
+  border-radius: 2px;
+}
+
+@mixin pseudoDash($pos) {
+  content: "";
+  #{$pos}: 6px;
+  @include dashSetings(absolute);
+  transition-property: $pos, transform;
+  transition-duration: 0.2s, 0.2s;
+  transition-delay: 0.2s, 0s;
+}
+
+@mixin pseudoDashActive($pos, $degs) {
+  transform: rotate($degs);
+  transition-delay: 0s, 0.2s;
+  width: 100%;
+  #{$pos}: 0;
 }
 
 .hamburger-btn {
@@ -20,36 +36,20 @@
   &__dash {
     @include dashSetings(relative);
     &::before {
-      content: "";
-      @include dashSetings(absolute);
-      top: 6px;
-      transition-property: top, transform;
-      transition-duration: 0.3s, 0.3s;
-      transition-delay: 0.3s, 0s;
+      @include pseudoDash(top);
     }
     &::after {
-      content: "";
-      @include dashSetings(absolute);
-      bottom: 6px;
-      transition-property: bottom, transform;
-      transition-duration: 0.3s, 0.3s;
-      transition-delay: 0.3s, 0s;
+      @include pseudoDash(bottom);
     }
   }
 
   &.active .hamburger-btn__dash {
     background: transparent;
     &::before {
-      width: 100%;
-      top: 0;
-      transform: rotate(45deg);
-      transition-delay: 0s, 0.3s;
+      @include pseudoDashActive(top, 45deg);
     }
     &::after {
-      width: 100%;
-      bottom: 0;
-      transform: rotate(-45deg);
-      transition-delay: 0s, 0.3s;
+      @include pseudoDashActive(bottom, -45deg);
     }
   }
 }
