@@ -12,9 +12,9 @@
 }
 
 $type-mix: (
-  primary: (#ffffff,#2231aa,#5360cd,),
-  secondary: (#313037,#e8e8e8,#dadada,),
-  secondary2: (#fd3419,transparent,transparent,),
+  primary: (#ffffff, #2231aa, #5360cd,),
+  secondary: (#313037, #e8e8e8 ,#dadada,),
+  secondary2: (#fd3419, transparent, transparent,),
 );
 
 .button {
@@ -36,7 +36,7 @@ $type-mix: (
       &.disabled {
         @include disabled();
         @if (#{&} == ".button--secondary2.disabled") {
-          @include disabled(null, nth($colors, 3));
+          background: nth($colors, 3);
           border: none;
         }
       }

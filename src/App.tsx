@@ -27,10 +27,8 @@ export const App = () => {
       <Button content="Secondary 2" type="secondary2" isDisabled callback={handleClick} />
       <br />
       <br />
-      <UserInfo userName="Volkov Dmitriy" />
-      <br />
-      <br />
       <HamburgerBtn />
+      <UserInfo userName="Volkov Dmitriy" />
       <br />
       <br />
       <Tabs content="All My-favorites Popular"/>

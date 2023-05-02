@@ -5,7 +5,7 @@
   border-radius: 2px;
   background-color: #fff;
   pointer-events: none;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 
 .hamburger-btn {
@@ -32,12 +32,15 @@
   }
 
   &.active .hamburger-btn__dash {
+    width: 16px;
     transform: rotate(45deg);
     &::before {
+      width: 100%;
       top: 0;
       transform: rotate(-90deg);
     }
     &::after {
+      width: 100%;
       bottom: 0;
       height: 0;
     }

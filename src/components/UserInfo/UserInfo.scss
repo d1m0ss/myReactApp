@@ -19,5 +19,13 @@
     width: 48px;
     border-radius: 2px;
     background: #5360cd;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    $initials: #{&} !global;
+  }
+  &:hover #{$initials}{
+    border-radius: 50%;
   }
 }
