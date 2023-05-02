@@ -1,5 +1,5 @@
-@mixin active($color, $bgColor, $bColor: $bgColor) {
-  border: 1px solid $bColor;
+@mixin active($color, $bgColor) {
+  border: 1px solid $bgColor;
   background: $bgColor;
   color: $color;
   cursor: pointer;
@@ -11,50 +11,37 @@
   cursor: not-allowed;
 }
 
+$type-mix: (
+  primary: (#ffffff,#2231aa,#5360cd,),
+  secondary: (#313037,#e8e8e8,#dadada,),
+  secondary2: (#fd3419,transparent,transparent,),
+);
+
 .button {
-  font-family: "Inter";
-  font-style: normal;
-  line-height: 24px;
-  font-weight: 600;
-  font-size: 18px;
+  font: normal 600 18px/24px "Inter";
   border: none;
 
   padding: 15.5px 31.5px;
   border-radius: 2px;
 
-  &--primary {
-    @include active(#ffffff, #2231aa);
+  @each $type, $colors in $type-mix {
+    &--#{$type} {
+      @include active(nth($colors, 1), nth($colors, 2));
 
-    &:hover {
-      @include active(#ffffff, #5360cd);
-    }
-
-    &.disabled {
-      @include disabled();
-    }
-  }
-  &--secondary {
-    @include active(#313037, #e8e8e8);
-
-    &:hover {
-      @include active(#313037, #dadada);
-    }
-
-    &.disabled {
-      @include disabled();
-    }
-  }
-  &--secondary2 {
-    @include active(#fd3419, transparent);
-
-    &:hover {
-      @include active(#fd3419, transparent);
-      border: 1px solid #dadada;
-    }
-
-    &.disabled {
-      @include disabled(#8d8e97, transparent);
-      border: none;
+      &:hover {
+        @include active(nth($colors, 1), nth($colors, 3));
+        @if (#{&} == ".button--secondary2:hover") {
+          border-color: #dadada
+        }
+      }
+      
+      &.disabled {
+        @include disabled();
+        @if (#{&} == ".button--secondary2.disabled") {
+          @include disabled(null, nth($colors, 3));
+          border: none;
+        }
+      }
     }
   }
 }
