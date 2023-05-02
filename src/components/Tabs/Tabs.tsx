@@ -8,9 +8,8 @@ interface ITabs {
 export const Tabs: FC<ITabs> = ({ content }) => {
   const getTabsQuantity = (content: string, event: (e: any) => void) => {
     content = content.trim();
-    if (!content.split(" ").length) return;
-    return content.split(" ").map((el) => (
-      <li className="tabs__item" onClick={event}>
+    return content.split(" ").map((el, i) => (
+      <li className={`tabs__item${!i ? " active" : ""}`} onClick={event}>
         {el.replace("-", " ")}
       </li>
     ));

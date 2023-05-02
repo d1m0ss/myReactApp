@@ -11,9 +11,7 @@
   background: #2231aa;
   column-gap: 16px;
   color: #fff;
-  font-weight: 600;
-  line-height: 34px;
-  font-size: 16px;
+  font: normal 600 16px/34px "Inter";
 
   &__initials {
     @include center;
@@ -21,7 +19,5 @@
     width: 48px;
     border-radius: 2px;
     background: #5360cd;
-  }
-  &__name {
   }
 }

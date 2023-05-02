@@ -1,10 +1,11 @@
-@mixin dashSetings {
+@mixin dashSetings($posStatus) {
   width: 20px;
   height: 2px;
+  position: $posStatus;
   border-radius: 2px;
   background-color: #fff;
   pointer-events: none;
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 
 .hamburger-btn {
@@ -14,27 +15,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  row-gap: 4px;
-  flex-direction: column;
   cursor: pointer;
-  position: relative;
 
   &__dash {
-    @include dashSetings;
-    position: relative;
+    @include dashSetings(relative);
     &::before {
       content: "";
-      @include dashSetings;
-      position: absolute;
+      @include dashSetings(absolute);
       top: 6px;
     }
     &::after {
       content: "";
-      @include dashSetings;
-      position: absolute;
+      @include dashSetings(absolute);
       bottom: 6px;
     }
-    // position: absolute;
   }
 
   &.active .hamburger-btn__dash {
