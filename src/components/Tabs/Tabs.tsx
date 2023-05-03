@@ -7,10 +7,10 @@ interface ITabs {
 
 export const Tabs: FC<ITabs> = ({ content }) => {
   const getTabsQuantity = (content: string, event: (e: any) => void) => {
-    if (!content.length) return;
+    if (!content.length) return "The content field is empty";
     content = content.trim();
     return content.split(" ").map((el, i) => (
-      <li className={`tabs__item${!i ? " active" : ""}`} onClick={event}>
+      <li key={i} className={`tabs__item${!i ? " active" : ""}`} onClick={event}>
         {el.replace("-", " ")}
       </li>
     ));

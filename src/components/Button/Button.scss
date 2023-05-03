@@ -11,7 +11,7 @@
   cursor: not-allowed;
 }
 
-$type-mix: (
+$typeColors-mix: (
   primary: (#ffffff, #2231aa, #5360cd,),
   secondary: (#313037, #e8e8e8 ,#dadada,),
   secondary2: (#fd3419, transparent, transparent,),
@@ -22,10 +22,10 @@ $type-mix: (
   padding: 15.5px 31.5px;
   border-radius: 2px;
 
-  @each $type, $colors in $type-mix {
+  @each $type, $colors in $typeColors-mix {
     &--#{$type} {
       @include active(nth($colors, 1), nth($colors, 2));
-
+      
       &:hover {
         @include active(nth($colors, 1), nth($colors, 3));
         @if (#{&} == ".button--secondary2:hover") {
