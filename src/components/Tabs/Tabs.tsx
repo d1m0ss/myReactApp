@@ -1,30 +1,21 @@
-import { FC } from "react";
+import { useState } from "react";
 import "./Tabs.scss";
+import { Tab } from "../Tab/Tab";
 
-interface ITabs {
-  content: string;
-}
-
-export const Tabs: FC<ITabs> = ({ content }) => {
-  const getTabsQuantity = (content: string, event: (e: any) => void) => {
-    if (!content.length) return "The content field is empty";
-    content = content.trim();
-    return content.split(" ").map((el, i) => (
-      <li key={i} className={`tabs__item${!i ? " active" : ""}`} onClick={event}>
-        {el.replace("-", " ")}
-      </li>
-    ));
-  };
-
-  const switchTab = (e: any) => {
-    e.target.parentNode.childNodes.forEach((item: any) => item.classList.remove("active"));
-    e.target.classList.toggle("active");
-  };
+export const Tabs = () => {
+  const [tabs] = useState([
+    { isActive: true, isDisabled: false, title: "All" },
+    { isActive: false, isDisabled: false, title: "My favorites" },
+    { isActive: false, isDisabled: true, title: "Popular" },
+  ]);
 
   return (
     <div className="tabs">
-      <ul className="tabs__wrapper">{getTabsQuantity(content, switchTab)}</ul>
-      <hr />
+      <ul className="tabs__wrapper">
+        {tabs.map(({ title, isActive, isDisabled }, i) => (
+          <Tab key={i} title={title} isActive={isActive} isDisabled={isDisabled} />
+        ))}
+      </ul>
     </div>
   );
 };

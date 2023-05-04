@@ -1,4 +1,21 @@
 .title {
-  font: normal 700 56px/80px "Inter";
   color: #313037;
+  &__H1 {
+    font: normal 700 56px/80px "Inter";
+  }
+  &__H2 {
+    font: normal 700 32px/44px "Inter";
+  }
+  &__H3 {
+    font: normal 600 18px/28px "Inter";
+  }
+  &__subline {
+    font: normal 600 16px/24px "Inter";
+  }
+  &__primary {
+    font: normal 400 18px/32px "Inter";
+  }
+  &__secondary {
+    font: normal 600 16px/24px "Inter";
+  }
 }

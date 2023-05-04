@@ -12,7 +12,12 @@ export const App = () => {
 
   return (
     <div className="app">
-      <Title content="Sign In" />
+      <Title type="H1" content="Sign In" />
+      <Title type="H2" content="Sign In" />
+      <Title type="H3" content="Sign In" />
+      <Title type="subline" content="Sign In" />
+      <Title type="primary" content="Sign In" />
+      <Title type="secondary" content="Sign In" />
       <br />
       <br />
       <Button content="Primary" type="primary" isDisabled={false} callback={handleClick} />
@@ -31,7 +36,7 @@ export const App = () => {
       <UserInfo userName="Volkov Dmitriy" />
       <br />
       <br />
-      <Tabs content="All My-favorites Popular"/>
+      <Tabs />
     </div>
   );
 };

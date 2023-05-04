@@ -1,0 +1,28 @@
+.tabs__item {
+  flex-basis: 100px;
+  font: normal 600 16px/24px "Inter";
+  list-style-type: none;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  padding-bottom: 24px;
+  position: relative;
+  &.active {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: #313037;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+    }
+  }
+  &:hover {
+    color: #2231aa;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    color: #8d8e97;
+  }
+}
