@@ -1,0 +1,27 @@
+.sign-up {
+  margin-top: 72px;
+  &__form {
+    margin: 72px auto 0;
+    width: 624px;
+    border: 1px solid #dadada;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    &-description {
+      margin-top: 24px;
+      text-align: center;
+      font: normal 500 16px/20px "Inter";
+      color: #8d8e97;
+    }
+    &-link {
+      color: #2231aa;
+    }
+  }
+  &__back {
+    display: inline-block;
+    margin-bottom: 32px;
+    font: normal 400 16px/24px "Inter";
+  }
+}

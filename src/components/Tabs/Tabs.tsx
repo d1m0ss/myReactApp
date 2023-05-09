@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./Tabs.scss";
 import { Tab } from "../Tab/Tab";
+import "./Tabs.scss";
 
 export const Tabs = () => {
   const [tabs] = useState([

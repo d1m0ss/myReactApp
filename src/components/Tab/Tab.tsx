@@ -15,11 +15,10 @@ const hanleClick = (e: any) => {
 };
 
 export const Tab: FC<ITab> = ({ title, isActive, isDisabled }) => {
+  const btnClass = `tabs__item ${isActive && "active"} ${isDisabled && "disabled"}`;
+
   return (
-    <li
-      onClick={hanleClick}
-      className={`tabs__item ${isActive ? "active" : ""} ${isDisabled ? "disabled" : ""}`}
-    >
+    <li onClick={hanleClick} className={btnClass}>
       {title}
     </li>
   );

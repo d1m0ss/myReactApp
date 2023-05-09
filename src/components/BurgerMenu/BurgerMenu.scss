@@ -24,10 +24,11 @@
   #{$pos}: 0;
 }
 
-.hamburger-btn {
+.burger-btn {
   width: 84px;
   height: 84px;
   background: #2231aa;
+  border-right: 1px solid #5360CD;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +44,7 @@
     }
   }
 
-  &.active .hamburger-btn__dash {
+  &.active .burger-btn__dash {
     background: transparent;
     &::before {
       @include pseudoDashActive(top, 45deg);

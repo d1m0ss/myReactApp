@@ -1,0 +1,22 @@
+.menu {
+  position: relative;
+  &__item {
+    list-style-type: none;
+  }
+  &__items {
+    position: absolute;
+    right: 0;
+  }
+  &__item-btn {
+    font: normal 600 16px/24px "Inter";
+    width: 259px;
+    padding: 29px 114px;
+    border: none;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+    background-color: #ffffff;
+    &:hover {
+      color: #2231aa;
+    }
+  }
+}

@@ -4,14 +4,14 @@ import "./Button.scss";
 interface IButton {
   content: string;
   type: "primary" | "secondary" | "secondary2";
-  isDisabled: boolean;
-  callback: () => void;
+  isDisabled?: boolean;
+  onClick: () => void;
 }
 
-export const Button: FC<IButton> = ({ content, type, isDisabled, callback }) => {
+export const Button: FC<IButton> = ({ content, type, isDisabled = false, onClick }) => {
   const buttonClass = `button button--${type} ${isDisabled ? "disabled" : "active"}`;
   return (
-    <button className={buttonClass} onClick={callback} disabled={isDisabled}>
+    <button className={buttonClass} onClick={onClick} disabled={isDisabled}>
       {content}
     </button>
   );

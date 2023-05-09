@@ -1,0 +1,23 @@
+.post {
+  &__footer {
+    height: 24px;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 41px;
+    border-bottom: 1px solid black;
+  }
+  &__count {
+    font: normal 700 16px/24px "Inter";
+  }
+  &__settings,
+  &__evaluation {
+    max-width: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & > img {
+      cursor: pointer;
+    }
+  }
+}

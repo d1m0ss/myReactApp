@@ -1,0 +1,41 @@
+.input {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 36px;
+    .label {
+      display: block;
+      font: normal 600 16px/20px "Inter";
+    }
+    .input {
+      width: 100%;
+      border: 2px solid transparent;
+      background: #ffffff;
+      padding: 16px 16px;
+      outline: none;
+      font: normal 400 16px/20px "Inter";
+      &:focus {
+        border-color: #dadada;
+      }
+      &:disabled {
+        cursor: not-allowed;
+        color: #8d8e97;
+        background-color: #e8e8e8;
+      }
+      &::placeholder {
+        color: #8d8e97;
+      }
+      &.error {
+        border-color: #fd3419;
+      }
+    }
+  }
+}
+
+.error-mesage {
+  position: absolute;
+  bottom: 0;
+  font: normal 400 16px/20px "Inter";
+  color: #fd3419;
+}

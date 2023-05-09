@@ -1,0 +1,23 @@
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font: normal 600 16px/20px "Inter";
+}
+.textarea {
+  width: 100%;
+  padding: 18px 20px;
+  height: 245px;
+  min-height: 100px;
+  max-height: 300px;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  outline: none;
+  font: normal 400 16px/20px "Inter";
+  resize: vertical;
+
+  &:focus {
+    border-color: #dadada;
+  }
+  &__wrapper {
+  }
+}

@@ -1,0 +1,26 @@
+.post-medium {
+  max-width: 352px;
+  &__date {
+  }
+  &__img-wrapper {
+    width: 100%;
+    height: 246px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    background: black;
+    & > img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+  &__wrapper {
+    & [class^="title"] {
+      margin: 8px 0 30px;
+    }
+  }
+}

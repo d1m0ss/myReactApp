@@ -1,0 +1,20 @@
+.registration-confirm {
+  margin-top: 72px;
+  &__back {
+    font: normal 400 16px/24px "Inter";
+    color: #313037;
+    margin-bottom: 32px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    margin: 72px auto 0;
+    max-width: 624px;
+    padding: 38px;
+    border: 1px solid #dadada;
+  }
+  &__text {
+    font: normal 400 16px/24px "Inter";
+  }
+}
