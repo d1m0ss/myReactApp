@@ -21,7 +21,7 @@ export const Title: FC<ITitle> = ({ type, content, isLink = false, linkPath = ""
   return (
     <>
       {isLink ? (
-        <a className="link" href={linkPath}>
+        <a className="link" target="_blank" href={linkPath}>
           {titlesMap[type]}
         </a>
       ) : (

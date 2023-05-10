@@ -10,7 +10,7 @@ export const PostFooter: FC = () => {
     <div className="post__footer">
       <div className="post__evaluation">
         <img src={upBtn} alt="up" />
-        <span className="post__count">20</span>
+        <span className="post__count">{Math.floor(Math.random() * 20)}</span>
         <img src={downBtn} alt="down" />
       </div>
       <div className="post__settings">

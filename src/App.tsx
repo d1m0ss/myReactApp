@@ -1,12 +1,12 @@
-import { PageTemlate } from "./components/PageTemlate/PageTemlate";
-import { RegistrationConfirm } from "./page/RegistrationConfirm/RegistrationConfirm";
 import "./App.scss";
+import { PageTemlate } from "./components/PageTemlate/PageTemlate";
+import { Blog } from "./page/Blog/Blog";
 
 export const App = () => {
   return (
     <div className="app">
       <PageTemlate>
-        <RegistrationConfirm />
+        <Blog />
       </PageTemlate>
     </div>
   );

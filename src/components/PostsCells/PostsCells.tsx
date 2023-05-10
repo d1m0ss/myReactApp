@@ -1,25 +1,14 @@
 import { FC } from "react";
 import { Post } from "../Post/Post";
 import { cards } from "../../mock/cards";
-import "./PostsList.scss";
+import "./PostsCells.scss";
 
-export const PostsList: FC = () => {
-  const fullPost = cards[0];
-  const mediumPost = cards.slice(1, 5);
-  const smallPost = cards.slice(5, 11);
+export const PostsCells: FC = () => {
+  const mediumPost = cards.slice(0, 6);
+  const smallPost = cards.slice(6);
   return (
     <div className="list">
       <div className="list__primary">
-        <div className="list__full-card">
-          <Post
-            date={fullPost.date}
-            type="large"
-            image={fullPost.image}
-            title={fullPost.title}
-            text={fullPost.text}
-            linkPath={fullPost.image}
-          />
-        </div>
         <div className="list__medium-card">
           {mediumPost.map(({ date, image, title }) => (
             <Post date={date} type="medium" image={image} title={title} linkPath={image} />

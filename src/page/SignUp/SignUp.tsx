@@ -22,7 +22,9 @@ export const SignUp: FC = () => {
   const handleChangeConfirmPassword = (newValue: string) => {
     setConfirmPassword(newValue);
   };
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    console.log("submit");
+  };
 
   return (
     <div className="sign-up">

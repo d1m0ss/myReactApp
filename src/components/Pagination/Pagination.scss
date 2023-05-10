@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  font: normal 600 16px/24px "Inter";
+  color: #313037;
+  &__pages {
+    display: flex;
+    column-gap: 32px;
+    & > * {
+      cursor: pointer;
+    }
+  }
+  &__prev,
+  &__next {
+    cursor: pointer;
+  }
+}
