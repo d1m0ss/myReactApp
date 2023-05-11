@@ -12,10 +12,8 @@ export const PageTemlate: FC<IPageTemlate> = ({ children }) => {
   return (
     <div className="page-template">
       <Header />
-      <Container>
-        {children}
-        <Footer />
-      </Container>
+      <Container>{children}</Container>
+      <Footer />
     </div>
   );
 };
