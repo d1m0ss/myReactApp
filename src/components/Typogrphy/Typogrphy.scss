@@ -1,4 +1,4 @@
-$title-types: (
+$typogrphy-types: (
   H1: normal 700 56px/80px "Inter",
   H2: normal 700 32px/44px "Inter",
   H3: normal 600 18px/28px "Inter",
@@ -7,10 +7,10 @@ $title-types: (
   secondary: normal 600 16px/24px "Inter",
 );
 
-.title {
+.typogrphy {
   color: #313037;
   
-  @each $type, $font in $title-types {
+  @each $type, $font in $typogrphy-types {
     &__#{$type} {font: $font;}
   }
 }

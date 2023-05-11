@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Title } from "../../Title/Title";
+import { Typogrphy } from "../../Typogrphy/Typogrphy";
 import { PostFooter } from "../PostFooter/PostFooter";
 import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
@@ -19,7 +19,7 @@ export const SmallPost: FC<ISmallPost> = ({ title, date, image = PostImg, linkPa
       <div className="post-small__wrapper">
         <div className="post-small__texts">
           <PostDate date={date} />
-          <Title content={title} type="H3" isLink linkPath={linkPath} />
+          <Typogrphy content={title} type="H3" isLink linkPath={linkPath} />
         </div>
         <div className="post-small__img-wrapper">
           <img src={image} alt="post-img" />

@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { Title } from "../../components/Title/Title";
+import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { IconButton } from "../../components/IconButton/IconButton";
 import UpIcon from "../../assets/icon/Up.svg";
 import DownIcon from "../../assets/icon/Down.svg";
 import Bookmark from "../../assets/icon/Bookmark.svg";
 import ArrowL from "../../assets/icon/Arrow-L.svg";
 import ArrowR from "../../assets/icon/Arrow-R.svg";
-import "./SelectedPost.scss";
+import "./SelectedPostPage.scss";
 
-export const SelectedPost: FC = () => {
+export const SelectedPostPage: FC = () => {
   const posts: string[] = [
     `Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets
     and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his
@@ -44,13 +44,13 @@ export const SelectedPost: FC = () => {
         <span>Home</span>
         <span>Post 14278</span>
       </div>
-      <Title content="Astronauts prep for new solar arrays on nearly seven-hour spacewalk" type="H1" />
+      <Typogrphy content="Astronauts prep for new solar arrays on nearly seven-hour spacewalk" type="H1" />
       <div className="selected-post__img-wrapper">
         <img className="selected-post__img" src={imgSrc} alt="" />
       </div>
       <section className="selected-post__texts">
         {posts.map((post) => (
-          <p>{post}</p>
+          <Typogrphy content={post} type="primary" />
         ))}
       </section>
       <section className="selected-post__btns">

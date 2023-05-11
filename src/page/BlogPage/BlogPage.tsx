@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { Tabs } from "../../components/Tabs/Tabs";
-import { Title } from "../../components/Title/Title";
+import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { PostsCells } from "../../components/PostsCells/PostsCells";
-import "./Blog.scss";
+import "./BlogPage.scss";
 
-export const Blog: FC = () => {
+export const BlogPage: FC = () => {
   return (
-    <div className="Blog">
-      <Title content="Blog" type="H1" />
+    <div className="blog">
+      <Typogrphy content="Blog" type="H1" />
       <Tabs />
       <PostsCells />
       <Pagination />

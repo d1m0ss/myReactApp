@@ -1,12 +1,12 @@
 import "./App.scss";
 import { PageTemlate } from "./components/PageTemlate/PageTemlate";
-import { SelectedPost } from "./page/SelectedPost/SelectedPost";
+import { SelectedPostPage } from "./page/SelectedPostPage/SelectedPostPage";
 
 export const App = () => {
   return (
     <div className="app">
       <PageTemlate>
-        <SelectedPost />
+        <SelectedPostPage />
       </PageTemlate>
     </div>
   );

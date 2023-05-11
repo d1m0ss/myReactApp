@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Title } from "../../Title/Title";
+import { Typogrphy } from "../../Typogrphy/Typogrphy";
 import { PostFooter } from "../PostFooter/PostFooter";
 import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
@@ -20,7 +20,7 @@ export const LargePost: FC<ILargePost> = ({ title, text, date, image = PostImg, 
       <div className="post-lage__wrapper">
         <div className="post-lage__texts">
           <PostDate date={date} />
-          <Title content={title} type="H2" isLink linkPath={linkPath} />
+          <Typogrphy content={title} type="H2" isLink linkPath={linkPath} />
           <p className="post-lage__text-content">{text}</p>
         </div>
         <div className="post-lage__img-wrapper">

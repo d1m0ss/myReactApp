@@ -1,10 +1,10 @@
 import { FC, useState } from "react";
-import "./SignUp.scss";
-import { Title } from "../../components/Title/Title";
+import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
+import "./SignUpPage.scss";
 
-export const SignUp: FC = () => {
+export const SignUpPage: FC = () => {
   const [name, setName] = useState("");
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +29,7 @@ export const SignUp: FC = () => {
   return (
     <div className="sign-up">
       <span className="sign-up__back">Back to home</span>
-      <Title content="Sing Up" type="H1" />
+      <Typogrphy content="Sing Up" type="H1" />
       <form className="sign-up__form" action="">
         <Input title="Name" placeholder="Your Name" value={name} handleChange={handleChangeName} />
         <Input title="Email" placeholder="Your email" value={email} handleChange={handleChangeEmail} />

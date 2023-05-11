@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Title } from "../../components/Title/Title";
+import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { Button } from "../../components/Button/Button";
 import "./Success.scss";
 
@@ -11,7 +11,7 @@ export const Success: FC = () => {
   return (
     <div className="success">
       <span className="success__back">Back to home</span>
-      <Title content="RegistrationConfirm" type="H1" />
+      <Typogrphy content="RegistrationConfirm" type="H1" />
       <div className="success__form">
         <p className="success__text">
           Email confirmed. <br />

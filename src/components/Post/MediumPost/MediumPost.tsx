@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Title } from "../../Title/Title";
+import { Typogrphy } from "../../Typogrphy/Typogrphy";
 import { PostFooter } from "../PostFooter/PostFooter";
 import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
@@ -22,7 +22,7 @@ export const MediumPost: FC<IMediumPost> = ({ title, date, image = PostImg, link
         </div>
         <div className="post-medium__texts">
           <PostDate date={date} />
-          <Title content={title} type="H3" isLink linkPath={linkPath} />
+          <Typogrphy content={title} type="H3" isLink linkPath={linkPath} />
         </div>
       </div>
       <PostFooter />
