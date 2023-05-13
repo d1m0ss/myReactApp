@@ -1,7 +1,12 @@
 import { FC } from "react";
 import { Post } from "../Post/Post";
 import { cards } from "../../mock/cards";
+import { IPost } from "../../interfaces/IPost";
 import "./PostsList.scss";
+
+interface IPostsList {
+  cards: IPost[];
+}
 
 export const PostsList: FC = () => {
   const fullPost = cards[0];
@@ -11,14 +16,7 @@ export const PostsList: FC = () => {
     <div className="list">
       <div className="list__primary">
         <div className="list__full-card">
-          <Post
-            date={fullPost.date}
-            type="large"
-            image={fullPost.image}
-            title={fullPost.title}
-            text={fullPost.text}
-            linkPath={fullPost.image}
-          />
+          <Post date={fullPost.date} type="large" image={fullPost.image} title={fullPost.title} text={fullPost.text} linkPath={fullPost.image} />
         </div>
         <div className="list__medium-card">
           {mediumPost.map(({ date, image, title }) => (

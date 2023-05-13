@@ -1,19 +1,12 @@
 import { FC } from "react";
+import { IPost } from "../../../interfaces/IPost";
 import { Typogrphy } from "../../Typogrphy/Typogrphy";
 import { PostFooter } from "../PostFooter/PostFooter";
 import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
 import "./MediumPost.scss";
 
-interface IMediumPost {
-  id?: number;
-  title: string;
-  date: string;
-  image: string;
-  linkPath?: string;
-}
-
-export const MediumPost: FC<IMediumPost> = ({ title, date, image = PostImg, linkPath = "" }) => {
+export const MediumPost: FC<IPost> = ({ title, date, image = PostImg, linkPath = "" }) => {
   return (
     <div className="post-medium">
       <div className="post-medium__wrapper">

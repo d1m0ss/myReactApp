@@ -4,16 +4,9 @@ import { PostFooter } from "../PostFooter/PostFooter";
 import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
 import "./SmallPost.scss";
+import { IPost } from "../../../interfaces/IPost";
 
-interface ISmallPost {
-  id?: number;
-  title: string;
-  date: string;
-  image: string;
-  linkPath?: string;
-}
-
-export const SmallPost: FC<ISmallPost> = ({ title, date, image = PostImg, linkPath = "" }) => {
+export const SmallPost: FC<IPost> = ({ title, date, image = PostImg, linkPath = "" }) => {
   return (
     <div className="post-small">
       <div className="post-small__wrapper">

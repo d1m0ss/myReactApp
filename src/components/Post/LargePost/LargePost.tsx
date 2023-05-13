@@ -1,20 +1,12 @@
 import { FC } from "react";
+import { IPost } from "../../../interfaces/IPost";
 import { Typogrphy } from "../../Typogrphy/Typogrphy";
 import { PostFooter } from "../PostFooter/PostFooter";
 import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
 import "./LargePost.scss";
 
-interface ILargePost {
-  id?: number;
-  title: string;
-  text: string;
-  date: string;
-  image: string;
-  linkPath?: string;
-}
-
-export const LargePost: FC<ILargePost> = ({ title, text, date, image = PostImg, linkPath = '' }) => {
+export const LargePost: FC<IPost> = ({ title, text, date, image = PostImg, linkPath = "" }) => {
   return (
     <div className="post-lage">
       <div className="post-lage__wrapper">
