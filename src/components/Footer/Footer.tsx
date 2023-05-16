@@ -9,3 +9,6 @@ export const Footer: FC = () => {
     </footer>
   );
 };
+useCallback(() => {
+funcName(a, b) => {}
+}, [a, b])
