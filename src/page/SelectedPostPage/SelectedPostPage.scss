@@ -5,7 +5,6 @@
     padding-right: 10px;
     position: relative;
     font: normal 400 16px/24px "Inter";
-    color: #313037;
     &::after {
       content: "";
       position: absolute;
@@ -56,12 +55,14 @@
   &__scores {
     display: flex;
     column-gap: 6px;
+    & div {
+      background-color: #e8e8e8;
+    }
     & img {
       box-sizing: content-box;
       width: 22px;
       height: 22px;
       padding: 17px 33px;
-      background-color: #e8e8e8;
     }
   }
   &__favorite-btn {
@@ -81,23 +82,9 @@
   &__nav,
   &__descrybe {
     font: normal 500 16px/24px "Inter";
-    color: #313037;
   }
   &__descrybe {
     font-weight: 400;
     color: #8d8e97;
-  }
-  &__btn {
-    display: flex;
-    column-gap: 24px;
-  }
-  &__btn-text {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-    align-items: flex-start;
-    &:first-child {
-      align-items: end;
-    }
   }
 }

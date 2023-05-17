@@ -1,0 +1,19 @@
+.search-page {
+  margin: 0 auto;
+  &__result{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-bottom: 71px;
+  }
+  .post-small {
+    max-width: 100%;
+    row-gap: 45px;
+    display: flex;
+    flex-direction: column;
+    &__wrapper {
+      align-self: flex-start;
+      flex-direction: row-reverse;
+    }
+  }
+}

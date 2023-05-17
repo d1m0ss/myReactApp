@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { Button } from "../../components/Button/Button";
-import "./Success.scss";
+import "./SuccessPage.scss";
 
-export const Success: FC = () => {
+export const SuccessPage: FC = () => {
   const handleClickGoHome = () => {
     console.log("handleClickGoHome");
   };

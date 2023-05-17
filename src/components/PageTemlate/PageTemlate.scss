@@ -1,7 +1,22 @@
 .page-template {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  min-height: 100%;
-  background-color: #f3f3f3;
+  @mixin standart {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100%;
+    background-color: #f3f3f3;
+  }
+  &-light {
+    @include standart();
+    color: #313037;
+  }
+  &-dark {
+    @include standart();
+    color: #fff;
+    background-color: #313037;
+    & button div {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
 }

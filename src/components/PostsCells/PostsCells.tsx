@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { Post } from "../Post/Post";
-import { cards } from "../../mock/cards";
+import { posts } from "../../mock/posts";
 import "./PostsCells.scss";
 
 export const PostsCells: FC = () => {
-  const mediumPost = cards.slice(0, 6);
-  const smallPost = cards.slice(6);
+  const mediumPost = posts.slice(0, 6);
+  const smallPost = posts.slice(6);
   return (
     <div className="list">
       <div className="list__primary">

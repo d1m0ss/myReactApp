@@ -1,17 +1,13 @@
 import { FC } from "react";
 import { Post } from "../Post/Post";
-import { cards } from "../../mock/cards";
+import { posts } from "../../mock/posts";
 import { IPost } from "../../interfaces/IPost";
 import "./PostsList.scss";
 
-interface IPostsList {
-  cards: IPost[];
-}
-
 export const PostsList: FC = () => {
-  const fullPost = cards[0];
-  const mediumPost = cards.slice(1, 5);
-  const smallPost = cards.slice(5, 11);
+  const fullPost = posts[0];
+  const mediumPost = posts.slice(1, 5);
+  const smallPost = posts.slice(5, 11);
   return (
     <div className="list">
       <div className="list__primary">

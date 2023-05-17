@@ -1,4 +1,4 @@
-export const cards = [
+export const posts = [
   {
     id: 1,
     image:

@@ -1,0 +1,16 @@
+.selected-post__btn {
+  display: flex;
+  column-gap: 24px;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: flex-end;
+  }
+}
+.Prev-post__btn {
+  flex-direction: row-reverse;
+  .selected-post__btn-text {
+    align-items: flex-start;
+  }
+}

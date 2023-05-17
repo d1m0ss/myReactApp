@@ -1,14 +1,18 @@
 import { FC } from "react";
 import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { IconButton } from "../../components/IconButton/IconButton";
+import { NavBtn } from "./NavBtn/NavBtn";
+import { useAppContext } from "../../components/AppContext/AppContext";
 import UpIcon from "../../assets/icon/Up.svg";
+import UpIconDark from "../../assets/icon/Up-dark.svg";
 import DownIcon from "../../assets/icon/Down.svg";
+import DownIconDark from "../../assets/icon/Down-dark.svg";
 import Bookmark from "../../assets/icon/Bookmark.svg";
-import ArrowL from "../../assets/icon/Arrow-L.svg";
-import ArrowR from "../../assets/icon/Arrow-R.svg";
+import BookmarkDark from "../../assets/icon/Bookmark-dark.svg";
 import "./SelectedPostPage.scss";
 
 export const SelectedPostPage: FC = () => {
+  const { isDarkTheme } = useAppContext();
   const posts: string[] = [
     `Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets
     and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his
@@ -56,40 +60,28 @@ export const SelectedPostPage: FC = () => {
       <section className="selected-post__btns">
         <div className="selected-post__scores">
           <IconButton onClick={funcHolder}>
-            <img src={UpIcon} alt="" />
+            <div>
+              <img src={isDarkTheme() ? UpIconDark : UpIcon} alt="" />
+            </div>
           </IconButton>
           <IconButton onClick={funcHolder}>
-            <img src={DownIcon} alt="" />
+            <div>
+              <img src={isDarkTheme() ? DownIconDark : DownIcon} alt="" />
+            </div>
           </IconButton>
         </div>
         <div className="selected-post__favorite">
           <IconButton onClick={funcHolder}>
             <div className="selected-post__favorite-btn">
-              <img src={Bookmark} alt="" />
+              <img src={isDarkTheme() ? BookmarkDark : Bookmark} alt="" />
               <span>Add to favorites</span>
             </div>
           </IconButton>
         </div>
       </section>
       <section className="selected-post__change-page">
-        <IconButton onClick={funcHolder}>
-          <div className="selected-post__btn">
-            <img src={ArrowL} alt="arrow" />
-            <div className="selected-post__btn-text">
-              <span className="selected-post__nav">Prev</span>
-              <span className="selected-post__descrybe">10 Things to Know About Salvador Dalí</span>
-            </div>
-          </div>
-        </IconButton>
-        <IconButton onClick={funcHolder}>
-          <div className="selected-post__btn">
-            <div className="selected-post__btn-text">
-              <span className="selected-post__nav">Next</span>
-              <span className="selected-post__descrybe">8 Beautiful Villas Belonging to Artists You Need to See</span>
-            </div>
-            <img src={ArrowR} alt="arrow" />
-          </div>
-        </IconButton>
+        <NavBtn type="Prev" title="10 Things to Know About Salvador Dalí" />
+        <NavBtn type="Next" title="8 Beautiful Villas Belonging to Artists You Need to See" />
       </section>
     </div>
   );
