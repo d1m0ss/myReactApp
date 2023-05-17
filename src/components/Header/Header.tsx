@@ -5,10 +5,12 @@ import { UserInfo } from "../UserInfo/UserInfo";
 import Search from "../../assets/icon/Search.svg";
 import Cancel from "../../assets/icon/Cancel.svg";
 import "./Header.scss";
+import { useAppContext } from "../AppContext/AppContext";
 
 interface IHeader {}
 
 export const Header: FC<IHeader> = () => {
+  const { setSearchTitle } = useAppContext();
   const [openSearch, setOpenSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
@@ -19,6 +21,7 @@ export const Header: FC<IHeader> = () => {
 
   const handleChangeSearch = (newValue: string) => {
     setSearchValue(newValue);
+    setSearchTitle(newValue)
   };
 
   return (

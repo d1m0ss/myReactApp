@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Tab } from "../Tab/Tab";
+import { Tab } from "./Tab/Tab";
 import "./Tabs.scss";
 
 export const Tabs = () => {

@@ -18,7 +18,7 @@ export const App = () => {
         <SignInPost />
         <SignUpPage />
         <SuccessPage /> */}
-        <SearchPage search="Astronaut" />
+        <SearchPage />
       </PageTemlate>
     </div>
   );
