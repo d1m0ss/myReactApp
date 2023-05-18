@@ -6,13 +6,13 @@ import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
 import "./LargePost.scss";
 
-export const LargePost: FC<IPost> = ({ title, text, date, image = PostImg, linkPath = "" }) => {
+export const LargePost: FC<IPost> = ({ id, title, text, date, image = PostImg, linkPath = "" }) => {
   return (
-    <div className="post-lage">
+    <div className="post-lage" id={`${id}`}>
       <div className="post-lage__wrapper">
         <div className="post-lage__texts">
           <PostDate date={date} />
-          <Typogrphy content={title} type="H2" isLink linkPath={linkPath} />
+          <Typogrphy content={title} type="H2" isLink linkPath={`/posts/${id}`} />
           <p className="post-lage__text-content">{text}</p>
         </div>
         <div className="post-lage__img-wrapper">

@@ -23,7 +23,7 @@ interface IAppProvider {
 }
 
 export const AppProvider: FC<IAppProvider> = ({ children }) => {
-  const [theme, setTheme] = useState<theme>("light");
+  const [theme, setTheme] = useState<theme>("dark");
   const [searchValue, setSearchValue] = useState<string>("Astronaut");
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
   const isDarkTheme = () => theme === "dark";

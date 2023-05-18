@@ -1,9 +1,28 @@
 .header {
   width: 100%;
+  max-height: 84px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: flex;
   background: #2231aa;
   justify-content: space-between;
   margin-bottom: 72px;
+  &__menu-wrapper {
+    position: absolute;
+    top: 84px;
+    left: -100%;
+    transition: ease-in 0.5s;
+    &--active {
+      position: absolute;
+      top: 84px;
+      left: 0;
+      transition: ease-out 0.5s;
+    }
+    .user-info {
+      border: none;
+    }
+  }
   &__box {
     display: flex;
   }
@@ -28,7 +47,7 @@
       opacity: 0.5;
     }
   }
-  &__cancel{
+  &__cancel {
     position: absolute;
     top: 0;
     bottom: 0;

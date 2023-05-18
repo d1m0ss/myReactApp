@@ -21,7 +21,7 @@ export const Typogrphy: FC<Typogrphy> = ({ type, content, isLink = false, linkPa
   return (
     <>
       {isLink ? (
-        <a className="link" target="_blank" href={linkPath}>
+        <a className="link" href={linkPath}>
           {titlesMap[type]}
         </a>
       ) : (

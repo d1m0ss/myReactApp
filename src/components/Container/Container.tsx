@@ -1,4 +1,6 @@
 import { FC, ReactNode } from 'react';
+import { BrowserRouter } from "react-router-dom";
+ 
 import './Container.scss';
 
 interface IContainer {

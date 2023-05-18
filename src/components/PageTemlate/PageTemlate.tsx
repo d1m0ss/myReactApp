@@ -10,18 +10,12 @@ interface IPageTemlate {
 }
 
 export const PageTemlate: FC<IPageTemlate> = ({ children }) => {
-  const { theme, toggleTheme } = useAppContext();
-  const handleToggletheme = () => {
-    toggleTheme();
-  };
+  const { theme } = useAppContext();
 
   return (
     <section className={`page-template-${theme}`}>
       <Header />
       <Container>{children}</Container>
-      <button type="button" onClick={handleToggletheme} style={{ position: "fixed", bottom: "10px", right: "10px" }}>
-        toggle {theme}
-      </button>
       <Footer />
     </section>
   );

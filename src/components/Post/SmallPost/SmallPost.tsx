@@ -6,13 +6,13 @@ import PostImg from "../../../assets/img/PostImage.png";
 import "./SmallPost.scss";
 import { IPost } from "../../../interfaces/IPost";
 
-export const SmallPost: FC<IPost> = ({ title, date, image = PostImg, linkPath = "" }) => {
+export const SmallPost: FC<IPost> = ({ id, title, date, image = PostImg, linkPath = "" }) => {
   return (
-    <div className="post-small">
+    <div className="post-small" id={`${id}`}>
       <div className="post-small__wrapper">
         <div className="post-small__texts">
           <PostDate date={date} />
-          <Typogrphy content={title} type="H3" isLink linkPath={linkPath} />
+          <Typogrphy content={title} type="H3" isLink linkPath={`posts/${id}`} />
         </div>
         <div className="post-small__img-wrapper">
           <img src={image} alt="post-img" />

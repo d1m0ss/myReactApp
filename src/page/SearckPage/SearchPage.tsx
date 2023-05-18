@@ -12,8 +12,8 @@ export const SearchPage: FC = () => {
     <section className="search-page">
       <Typogrphy type="H1" content={`Search results '${searchValue}'`} />
       <section className="search-page__result">
-        {posts.map(({ date, image, title }) => (
-          <Post date={date} image={image} title={title} type="small" />
+        {posts.map(({ id, date, image, title }) => (
+          <Post id={id} date={date} image={image} title={title}  type="small" />
         ))}
       </section>
       <Pagination />

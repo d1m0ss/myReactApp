@@ -1,12 +1,9 @@
 import { FC, useState } from "react";
 import { IconButton } from "../../../IconButton/IconButton";
-import more from "../../../../assets/icon/More-Horizontal.svg";
-import moreDark from "../../../../assets/icon/More-dark.svg";
 import "./PostMenu.scss";
-import { useAppContext } from "../../../AppContext/AppContext";
+import { More } from "../../../../assets";
 
 export const PostMenu: FC = () => {
-  const { isDarkTheme } = useAppContext();
   const options = ["Edit", "Delete"];
   const [open, setOpen] = useState(false);
 
@@ -23,7 +20,7 @@ export const PostMenu: FC = () => {
   return (
     <div className="menu">
       <IconButton onClick={handleToggleClick}>
-        <img src={isDarkTheme() ? moreDark : more} alt="" />
+        <More />
       </IconButton>
       {open && (
         <ul className="menu__items">

@@ -2,17 +2,11 @@ import { FC } from "react";
 import { Typogrphy } from "../../components/Typogrphy/Typogrphy";
 import { IconButton } from "../../components/IconButton/IconButton";
 import { NavBtn } from "./NavBtn/NavBtn";
-import { useAppContext } from "../../components/AppContext/AppContext";
-import UpIcon from "../../assets/icon/Up.svg";
-import UpIconDark from "../../assets/icon/Up-dark.svg";
-import DownIcon from "../../assets/icon/Down.svg";
-import DownIconDark from "../../assets/icon/Down-dark.svg";
-import Bookmark from "../../assets/icon/Bookmark.svg";
-import BookmarkDark from "../../assets/icon/Bookmark-dark.svg";
+import { Bookmark, Down, Up } from "../../assets";
+import { BreadCrumbs } from "./BreadCrumbs/BreadCrumbs";
 import "./SelectedPostPage.scss";
 
 export const SelectedPostPage: FC = () => {
-  const { isDarkTheme } = useAppContext();
   const posts: string[] = [
     `Astronauts Kayla Barron and Raja Chari floated out of the International Space Station airlock for a spacewalk Tuesday, installing brackets
     and struts to support new solar arrays to upgrade the research lab’s power system on the same day that crewmate Mark Vande Hei marked his
@@ -44,10 +38,7 @@ export const SelectedPostPage: FC = () => {
 
   return (
     <div className="selected-post">
-      <div className="bread-cramps">
-        <span>Home</span>
-        <span>Post 14278</span>
-      </div>
+      <BreadCrumbs />
       <Typogrphy content="Astronauts prep for new solar arrays on nearly seven-hour spacewalk" type="H1" />
       <div className="selected-post__img-wrapper">
         <img className="selected-post__img" src={imgSrc} alt="" />
@@ -60,20 +51,20 @@ export const SelectedPostPage: FC = () => {
       <section className="selected-post__btns">
         <div className="selected-post__scores">
           <IconButton onClick={funcHolder}>
-            <div>
-              <img src={isDarkTheme() ? UpIconDark : UpIcon} alt="" />
+            <div className="selected-post__up-btn">
+              <Up />
             </div>
           </IconButton>
           <IconButton onClick={funcHolder}>
-            <div>
-              <img src={isDarkTheme() ? DownIconDark : DownIcon} alt="" />
+            <div className="selected-post__down-btn">
+              <Down />
             </div>
           </IconButton>
         </div>
         <div className="selected-post__favorite">
           <IconButton onClick={funcHolder}>
             <div className="selected-post__favorite-btn">
-              <img src={isDarkTheme() ? BookmarkDark : Bookmark} alt="" />
+              <Bookmark />
               <span>Add to favorites</span>
             </div>
           </IconButton>

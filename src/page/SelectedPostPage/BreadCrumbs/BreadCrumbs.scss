@@ -1,0 +1,29 @@
+.bread-crumbs {
+  display: flex;
+  column-gap: 8px;
+  & > a {
+    opacity: 0.5;
+    &:not(:last-of-type) {
+      opacity: 1;
+      padding-right: 10px;
+      position: relative;
+      font: normal 400 16px/24px "Inter";
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: #8d8e97;
+        display: block;
+        height: calc(100% - 4px);
+        width: 2px;
+      }
+    }
+  }
+
+  & > span:last-of-type {
+    color: #8d8e97;
+  }
+}

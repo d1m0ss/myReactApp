@@ -1,8 +1,7 @@
 import { FC } from "react";
 import { IconButton } from "../../../components/IconButton/IconButton";
-import ArrowL from "../../../assets/icon/Arrow-L.svg";
-import ArrowR from "../../../assets/icon/Arrow-R.svg";
 import "./NavBtn.scss";
+import { ArrowL, ArrowR } from "../../../assets";
 
 interface INavBtn {
   type: "Next" | "Prev";
@@ -21,7 +20,7 @@ export const NavBtn: FC<INavBtn> = ({ type, title }) => {
             <span className="selected-post__nav">{type}</span>
             <span className="selected-post__descrybe">{title}</span>
           </div>
-          <img src={type === "Next" ? ArrowR : ArrowL} alt="arrow" />
+          {type === "Next" ? <ArrowR /> : <ArrowL />}
         </div>
       </IconButton>
     </div>

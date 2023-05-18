@@ -6,16 +6,16 @@ import { PostDate } from "../PostDate/PostDate";
 import PostImg from "../../../assets/img/PostImage.png";
 import "./MediumPost.scss";
 
-export const MediumPost: FC<IPost> = ({ title, date, image = PostImg, linkPath = "" }) => {
+export const MediumPost: FC<IPost> = ({ id, title, date, image = PostImg, linkPath = "" }) => {
   return (
-    <div className="post-medium">
+    <div className="post-medium" id={`${id}`}>
       <div className="post-medium__wrapper">
         <div className="post-medium__img-wrapper">
           <img src={image} alt="post-img" />
         </div>
         <div className="post-medium__texts">
           <PostDate date={date} />
-          <Typogrphy content={title} type="H3" isLink linkPath={linkPath} />
+          <Typogrphy content={title} type="H3" isLink linkPath={`posts/${id}`} />
         </div>
       </div>
       <PostFooter />

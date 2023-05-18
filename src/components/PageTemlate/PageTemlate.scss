@@ -5,6 +5,7 @@
     position: relative;
     min-height: 100%;
     background-color: #f3f3f3;
+    transition: 0.3s;
   }
   &-light {
     @include standart();
@@ -17,6 +18,12 @@
     & button div {
       color: #fff;
       background-color: transparent;
+    }
+    svg {
+      path {
+        fill: #fff;
+        // stroke: #fff;
+      }
     }
   }
 }
