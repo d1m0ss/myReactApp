@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { App } from "./App";
+import { App } from "./reduxPractic/App";
 import { AppProvider } from "./components/AppContext/AppContext";
 import { BrowserRouter } from "react-router-dom";
 import "./index.scss";

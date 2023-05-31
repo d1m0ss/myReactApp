@@ -15,14 +15,32 @@
     @include standart();
     color: #fff;
     background-color: #313037;
-    & button div {
+    & span {
       color: #fff;
-      background-color: transparent;
+    }
+    & .selected-post__btns div {
+      span {
+        color: #313037;
+      }
+      svg {
+        path {
+          fill: #313037;
+        }
+      }
     }
     svg {
       path {
         fill: #fff;
-        // stroke: #fff;
+      }
+    }
+    .tabs__item.active::after {
+      background-color: #fff;
+    }
+    & .selected-post__btn {
+      svg {
+        path {
+          stroke: #fff;
+        }
       }
     }
   }

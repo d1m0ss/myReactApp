@@ -7,9 +7,15 @@ import { Moon, Sun } from "../../../assets";
 
 export const HeaderMenu: FC = () => {
   const { theme, isDarkTheme, toggleTheme } = useAppContext();
+  const options = [
+    { id: 1, name: "Home", url: "/posts" },
+    { id: 2, name: "Add post", url: "" },
+    { id: 3, name: "Profile", url: "" },
+  ];
   const handleToggletheme = () => {
     toggleTheme();
   };
+
   return (
     <section className="header-menu">
       <nav className={`header-menu__nav ${theme}`}>

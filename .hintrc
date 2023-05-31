@@ -8,8 +8,15 @@
       {
         "ignore": [
           "user-select",
-          "position: sticky"
+          "position: sticky",
+          "scrollbar-width"
         ]
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
       }
     ]
   }
